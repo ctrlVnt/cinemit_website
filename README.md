@@ -2,7 +2,27 @@
 
 ## Welcome!
 
-Thank you for your interest in contributing to CineMit ! This project is open to the community, and we enthusiastically welcome new contributions, suggestions, and improvements. Please follow these simple guidelines to participate in the project.
+Thank you for your interest in contributing to CineMit ! 
+This is the presentation website for the group cinema meet-up app, [available for download on the PlayStore](https://play.google.com/store/apps/details?id=com.ctrlvnt.cinemit). The website is built using Flutter.
+
+## Prerequisites
+
+### 1. Get your API key
+Before you begin you need to optain an API key from [TMDB](https://developer.themoviedb.org/docs/getting-started).
+
+### 2. Insert your API key in the project
+After you have to insert the string of API kei into [this file](https://github.com/ctrlVnt/cinemit_website/blob/main/lib/global/apikeys.dart).
+
+## How to Build
+
+### 1. Flutter and Dart
+You need to install Flutter and Dart, you can find instructions from the [official website](https://docs.flutter.dev/get-started/install)
+
+### 2. Run the Progect
+From the source of project you can execute ``flutter run`` to start project on your localhost.
+
+### 3. Deploy of website
+The website is hosted on Netlify and points to the [build/web](https://github.com/ctrlVnt/cinemit_website/tree/main/build/web) folder. Each time the command ```flutter build web```  is run, a trigger will reload the Netlify server, automatically updating the website.
 
 ## How to Contribute
 
@@ -12,7 +32,7 @@ Before making any changes, please fork the main repository. You can do this by c
 ### 2. Clone the Repository
 Clone the forked repository to your local machine using the following command:
 ```bash
-git clone https://github.com/your-username/project-name.git
+git clone https://github.com/ctrlVnt/cinemit_website.git
 ```
 
 ### 3. Create a New Branch
@@ -20,12 +40,8 @@ It's always a good idea to work on a new branch for each modification you propos
 ```bash
 git checkout -b branch-name
 ```
-Choose a descriptive name for the branch that reflects the type of changes you are making (e.g., `fix-bug` or `feature-add-function`).
 
-### 4. Make Your Changes
-Now you are ready to make your changes. Be sure to follow the style guidelines and test the code locally before proceeding.
-
-### 5. Commit and Push Your Changes
+### 4. Commit and Push Your Changes
 After making the changes, create a commit with a meaningful message:
 ```bash
 git add .
@@ -36,24 +52,12 @@ Then push the branch with the changes to your GitHub repository:
 git push origin branch-name
 ```
 
-### 6. Open a Pull Request
+### 5. Open a Pull Request
 Now that your changes are pushed, it's time to open a **Pull Request** (PR):
 - Go to the original repository (the one you forked from).
 - Click on the "New Pull Request" button.
 - Select the branch you just pushed and complete the description of your PR.
 - Provide a detailed explanation of what you changed and why.
-
-### 7. Feedback and Review
-Your contribution will be reviewed by one of the main project collaborators. You may receive requests for changes or suggestions for further improvements.
-
-### 8. Code of Conduct
-Please make sure to follow our [Code of Conduct](link-to-code-of-conduct) throughout the collaboration process. We aim to maintain a respectful and inclusive environment for everyone.
-
-## Contributor Guidelines
-
-- **Coding Standards**: Follow the style rules of the language used in the project.
-- **Testing**: Always verify that your changes work properly and do not break existing functionality.
-- **Documentation**: Add or update documentation if your contribution introduces new features.
 
 ## Contact Us
 
