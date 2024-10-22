@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="CineMit è l'applicazione di incontri organizzati amicali al cinema. Vuoi vedere un film al cinema ma sei il solo del tuo gruppo di ammici a volerci andare? Cosa aspetti, scarica CineMit!">
+  <meta name="keywords" content="cinema, incontri, datingapp, app">
+  <meta name="author" content="Riccardo Venturini">
+
+   <!-- Meta tag per Open Graph (og) per ottimizzare la condivisione social -->
+   <meta property="og:title" content="CineMit">
+   <meta property="og:description" content="L'applicazione degli incontri di gruppo al cinema">
+   <meta property="og:image" content="img/Cover.jpeg">
+   <meta property="og:url" content="https://www.cinemit.app">
+   <meta property="og:type" content="website">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="CineMit">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <link rel="apple-touch-icon" href="icons/Icon-512.png">
+  <link href="icons/favicon_dark.svg" rel="icon" media="(prefers-color-scheme: light)">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.ico"/>
+
+  <title>CineMit - l'applicazione di incontri al cinema</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    .loading {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+
+    .loader {
+      width: 50px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      border: 8px solid;
+      border-color: #000 #0000;
+      animation: l1 1s infinite;
+    }
+    @keyframes l1 {
+      to{
+        transform: rotate(.5turn)
+      }
+    }
+  </style>
+  </head>
+
+  <body>
+
+  <!-- First time loading -->
+  <div class="loading">
+    <div class="loader"></div>
+  </div>
+
+  <!-- Ensure first time loading progress is gone after app loads -->
+  <script>
+    window.addEventListener("flutter-first-frame", function() {
+        var element = document.getElementsByClassName("loading");
+        element[0].parentNode.removeChild(element[0]);
+    });
+  </script>
+
+  <script defer src="main.dart.js" type="application/javascript"></script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
