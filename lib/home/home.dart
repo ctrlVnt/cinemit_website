@@ -3,6 +3,7 @@ import 'package:cinemit_website/global/utils.dart';
 import 'package:cinemit_website/home/body/body.dart';
 import 'package:cinemit_website/home/footer/footer.dart';
 import 'package:cinemit_website/home/header/header.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 
 
@@ -60,6 +61,7 @@ class _Home extends State<MyHomePage> {
                 ),
               ),
           ),
+          SizedBox(width: 10,),
         ],
       ),
       body: const SingleChildScrollView(

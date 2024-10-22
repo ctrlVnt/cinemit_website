@@ -7,6 +7,7 @@ import 'package:http/http.dart' as http;
 
 import '../../global/apikeys.dart';
 import '../../global/utils.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Header extends StatefulWidget {
   const Header({super.key});
@@ -98,6 +99,7 @@ class _Header extends State<Header> {
                   child: Opacity(
                     opacity: 0.2,  // Puoi regolare l'opacità dello sfondo
                     child: ListView.builder(
+                      physics: NeverScrollableScrollPhysics(),
                       scrollDirection: Axis.horizontal,
                       controller: _scrollController,
                       itemCount: movies.length,
@@ -129,7 +131,7 @@ class _Header extends State<Header> {
                     SizedBox(
                       width: 1200,
                       child: Text(
-                        'Benvenuto in CineMit',
+                        AppLocalizations.of(context)!.helloWorld,
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: isScreenWide ? 80 : 30,
@@ -142,8 +144,7 @@ class _Header extends State<Header> {
                     SizedBox(
                       width: 1200,
                       child: Text(
-                        'L\'unica app di incontri di gruppo dedicata agli amanti del cinema. Condividi una fantastica'
-                        'esperienza cinematografica in compagnia di altri cinefili.',
+                       AppLocalizations.of(context)!.description,
                         style: TextStyle(fontSize: isScreenWide ? 30 : 20),
                         textAlign: TextAlign.center,
                       ),

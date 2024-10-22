@@ -1,7 +1,7 @@
 
-import 'package:cinemit_website/widgets/demo.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
 import '../../global/utils.dart';
@@ -17,7 +17,7 @@ class Body extends StatefulWidget {
 class _Body extends State<Body> {
 
   double? spaceDemoH = 150;
-  double? titlespace = 80;
+  double? titlespace = 50;
 
   @override
   Widget build(BuildContext context) {
@@ -33,17 +33,16 @@ class _Body extends State<Body> {
             children: <Widget>[
               SizedBox(height:80),
               Text(
-                'Vorresti condividere i tuoi gusti cinematigrafici?',
+                AppLocalizations.of(context)!.shareCinematicTastes,
                 style: TextStyle(
                     fontSize: isScreenWide ? 60 : 30,
                     fontWeight: FontWeight.bold
                 ),
               ),
 
-              SizedBox(height: titlespace,),
+              SizedBox(height: 80,),
 
-                isScreenWide
-                ?
+                if(isScreenWide)
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -51,7 +50,7 @@ class _Body extends State<Body> {
                     SizedBox(
                       width: 350,
                       child:Text(
-                      'Scopri le novità del momento',
+                      AppLocalizations.of(context)!.discoverNewReleases,
                       textAlign: TextAlign.left,
                       style:isScreenWide ? decorationTxt : decorationTxtNotWide
                     ),
@@ -59,25 +58,9 @@ class _Body extends State<Body> {
                   const SizedBox(width: 150,),
                     demo("lib/assets/gif/home.gif"),
                   ],
-                )
-                :
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                  
-                    SizedBox(
-                      width: 350,
-                      child:Text(
-                      'Scopri le novità del momento',
-                      textAlign: TextAlign.left,
-                      style:isScreenWide ? decorationTxt : decorationTxtNotWide
-                    ),
-                    ),
-                  const SizedBox(height: 80,),
-                    demoNotWide("lib/assets/gif/home.gif"),
-                  ],
                 ),
-
+                
+                if(isScreenWide)
                 SizedBox(height: spaceDemoH,),
 
                 isScreenWide
@@ -90,7 +73,7 @@ class _Body extends State<Body> {
                     SizedBox(
                       width: 350,
                       child: Text(
-                      'Proponi un film alla comunity attorno a te',
+                      AppLocalizations.of(context)!.proposeToCommunity,
                       textAlign: TextAlign.right,
                       style: isScreenWide ? decorationTxt : decorationTxtNotWide
                     ),
@@ -104,8 +87,8 @@ class _Body extends State<Body> {
                     SizedBox(
                       width: 350,
                       child: Text(
-                      'Proponi un film alla comunity attorno a te',
-                      textAlign: TextAlign.right,
+                      AppLocalizations.of(context)!.discoverAndPropose,
+                      textAlign: TextAlign.center,
                       style: isScreenWide ? decorationTxt : decorationTxtNotWide
                     ),
                     ),
@@ -124,7 +107,7 @@ class _Body extends State<Body> {
                   SizedBox(
                       width: 350,
                       child: Text(
-                        'Cerca altre sale grazie alla mappa',
+                        AppLocalizations.of(context)!.mapTheaters,
                         textAlign: TextAlign.left,
                         style: isScreenWide ? decorationTxt : decorationTxtNotWide
                       ),
@@ -140,8 +123,8 @@ class _Body extends State<Body> {
                   SizedBox(
                       width: 350,
                       child: Text(
-                        'Cerca altre sale grazie alla mappa',
-                        textAlign: TextAlign.left,
+                        AppLocalizations.of(context)!.mapTheaters,
+                        textAlign: TextAlign.center,
                         style: isScreenWide ? decorationTxt : decorationTxtNotWide
                       ),
                     ),
@@ -153,8 +136,7 @@ class _Body extends State<Body> {
 
                 SizedBox(height: spaceDemoH,),
 
-                isScreenWide
-                ?
+                if(isScreenWide)
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -164,30 +146,14 @@ class _Body extends State<Body> {
                     SizedBox(
                       width: 350,
                       child: Text(
-                        'Filtra le sale in base ai tuoi interessi',
+                        AppLocalizations.of(context)!.filterTheaters,
                         textAlign: TextAlign.right,
                         style: isScreenWide ? decorationTxt : decorationTxtNotWide
                       ),
                     )
                   ],
-                )
-                :
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      width: 350,
-                      child: Text(
-                        'Filtra le sale in base ai tuoi interessi',
-                        textAlign: TextAlign.right,
-                        style: isScreenWide ? decorationTxt : decorationTxtNotWide
-                      ),
-                    ),
-                    const SizedBox(height: 80,),
-                    demoNotWide("lib/assets/gif/filter.gif"),
-                  ],
                 ),
-
+                if(isScreenWide)
                 SizedBox(height: spaceDemoH,),
                 
                 isScreenWide
@@ -198,7 +164,7 @@ class _Body extends State<Body> {
                     SizedBox(
                       width: 350,
                       child:Text(
-                      'Personalizza l\'app a tuo piacimento',
+                      AppLocalizations.of(context)!.customizeApp,
                       textAlign: TextAlign.left,
                       style: isScreenWide ? decorationTxt : decorationTxtNotWide
                     ),
@@ -214,8 +180,8 @@ class _Body extends State<Body> {
                     SizedBox(
                       width: 350,
                       child:Text(
-                      'Personalizza l\'app a tuo piacimento',
-                      textAlign: TextAlign.left,
+                      AppLocalizations.of(context)!.customizeApp,
+                      textAlign: TextAlign.center,
                       style: isScreenWide ? decorationTxt : decorationTxtNotWide
                     ),
                     ),
@@ -224,10 +190,11 @@ class _Body extends State<Body> {
                   ],
                 ),
 
-                SizedBox(height: 50,),
+                SizedBox(height: spaceDemoH,),
 
-              const Text(
-                'Scarica ora',
+              Text(
+                AppLocalizations.of(context)!.downloadNow,
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold
@@ -251,7 +218,7 @@ class _Body extends State<Body> {
               ),
             ),
             const SizedBox(height: 20),
-            const Text(
+            Text(
               'Coming soon on Apple App Store!',
               style: TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
             ),
@@ -260,8 +227,8 @@ class _Body extends State<Body> {
 
             SizedBox(height: spaceDemoH,),
 
-              const Text(
-                'Team di sviluppo',
+              Text(
+                AppLocalizations.of(context)!.teamDevelopment,
                 style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold
@@ -297,8 +264,8 @@ class _Body extends State<Body> {
 
               SizedBox(height: spaceDemoH,),
 
-              const Text(
-                'Sostieni !',
+              Text(
+                AppLocalizations.of(context)!.supportUs,
                 style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold
@@ -307,10 +274,11 @@ class _Body extends State<Body> {
               SizedBox(height: titlespace,),
               SizedBox(
                       width: 800,
-                      child:const Text(
-                    'Come anticipato, al momento non guadagniamo nulla dalla piattaforma. Sostienici per permetterci di continuare a offrire il meglio, se ti va!',
+                      child: Text(
+                    AppLocalizations.of(context)!.supportMessage,
+                    textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontSize: 25,
+                      fontSize: 20,
                   ),
                 ),
               ),
@@ -321,7 +289,7 @@ class _Body extends State<Body> {
                 },
                   icon: const Text(
                   '☕',
-                  style: TextStyle(fontSize: 24),
+                  style: TextStyle(fontSize: 20),
                   ),
                   label: const Text(
                     'Buy me a coffee',
@@ -339,9 +307,11 @@ class _Body extends State<Body> {
                   SizedBox(height: titlespace,),
                   SizedBox(
                       width: 800,
-                      child:const Text(
-                      'Unisciti alla community per avere l\'anteprima esclusiva!',
-                      style: TextStyle(fontSize: 25),
+                      child: Text(
+                      AppLocalizations.of(context)!.joinCommunity,
+                      style: TextStyle(
+                        fontSize: 20
+                      ),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -372,9 +342,9 @@ class _Body extends State<Body> {
                       ],
                     ),
                   ),
-                  SizedBox(height: spaceDemoH,),
-                  const Text(
-                    'Seguici anche sui social',
+                  SizedBox(height: titlespace,),
+                  Text(
+                    AppLocalizations.of(context)!.followUsOnSocial,
                     style: TextStyle(
                         fontSize: 20,
                     ),

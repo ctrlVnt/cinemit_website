@@ -1,0 +1,22 @@
+{
+    "@@locale": "fr",
+    "helloWorld": "Bienvenue à CineMit",
+    "@helloWorld": {
+      "description": "Welcome message"
+    },
+    "description": "La seule application de rencontre de groupe dédiée aux cinéphiles. Partagez une expérience cinématographique fantastique avec d'autres passionnés de cinéma.",
+    "shareCinematicTastes": "Voudrais-tu partager tes goûts cinématographiques ?",
+    "discoverNewReleases": "Découvre les nouveautés du moment",
+    "proposeToCommunity": "Propose un film à la communauté autour de toi",
+    "discoverAndPropose": "Cherche un film et propose-le à la communauté autour de toi",
+    "downloadNow": "Télécharge maintenant",
+    "teamDevelopment": "Équipe de développement",
+    "supportUs": "Soutiens-nous !",
+    "mapTheaters": "Recherchez également d'autres salles grâce à la carte",
+    "filterTheaters": "Filtrez les salles selon vos intérêts",
+    "customizeApp": "Personnalisez l'application à votre guise et organisez-vous pour rencontrer les autres",
+    "supportMessage": "Nous ne gagnons actuellement rien de la plateforme. Soutenez-nous pour nous permettre de continuer à offrir le meilleur, si vous le souhaitez !",
+    "joinCommunity": "Rejoins la communauté pour obtenir des avant-premières exclusives !",
+    "followUsOnSocial": "Suis-nous aussi sur les réseaux sociaux"
+  }
+  

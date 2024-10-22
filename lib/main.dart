@@ -1,12 +1,15 @@
 import 'package:cinemit_website/home/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 void main() {
-  runApp(const MyApp());
+  runApp(const CineMitWeb());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CineMitWeb extends StatelessWidget {
+  const CineMitWeb({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +39,17 @@ class MyApp extends StatelessWidget {
         //fontFamily: 'Open Sans',
       ),
       themeMode: ThemeMode.dark,
+      localizationsDelegates: [
+        AppLocalizations.delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en'),
+        Locale('fr'),
+        Locale('it'),
+      ],
       home: const MyHomePage(),
     );
   }

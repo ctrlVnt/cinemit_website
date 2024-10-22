@@ -1,0 +1,22 @@
+{
+    "@@locale": "en",
+    "helloWorld": "Welcome to CineMit",
+    "@helloWorld": {
+      "description": "Welcome message"
+    },
+    "description": "The only group meeting app dedicated to movie lovers. Share a fantastic movie experience with other movie enthusiasts.",
+    "shareCinematicTastes": "Would you like to share your cinematic tastes?",
+    "discoverNewReleases": "Discover the latest releases",
+    "proposeToCommunity": "Propose a film to the community around you",
+    "discoverAndPropose": "Search for a movie and propose it to the community around you",
+    "downloadNow": "Download now",
+    "teamDevelopment": "Development Team",
+    "supportUs": "Support us!",
+    "mapTheaters": "Also search for other theaters using the map",
+    "filterTheaters": "Filter theaters based on your interests",
+    "customizeApp": "Customize the app as you like and organize to meet others",
+    "supportMessage": "We currently earn nothing from the platform. Support us to allow us to continue offering the best, if you'd like!",
+    "joinCommunity": "Join the community for exclusive previews!",
+    "followUsOnSocial": "Follow us on social media"
+  }
+  
