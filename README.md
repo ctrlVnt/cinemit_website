@@ -1,16 +1,17 @@
-# cinemit_website
+# v website
 
-Website of CineMit
+Website of (CineMit)[https://cinemit.app]
 
-## Getting Started
+## Benvenuti!
 
-This project is a starting point for a Flutter application
+Grazie per il vostro interesse a collaborare a CineMit! Questo progetto è aperto alla comunità e accogliamo con entusiasmo nuovi contributi, suggerimenti e miglioramenti. Seguite queste semplici linee guida per partecipare al progetto.
 
-A few resources to get you started if this is your first Flutter project:
+## Come Contribuire
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 1. Fork del Repository
+Prima di fare qualsiasi modifica, effettuate un fork del repository principale. Potete fare ciò cliccando sul pulsante **Fork** in alto a destra su GitHub. In questo modo creerete una copia del progetto nel vostro account.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 2. Clonare il Repository
+Clonate il repository appena forkato sul vostro computer eseguendo il seguente comando:
+```bash
+git clone https://github.com/tuo-username/nome-del-progetto.git

@@ -224,7 +224,7 @@ class _Body extends State<Body> {
                   ],
                 ),
 
-                SizedBox(height: spaceDemoH,),
+                SizedBox(height: 50,),
 
               const Text(
                 'Scarica ora',
