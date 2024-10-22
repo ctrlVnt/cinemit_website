@@ -92,6 +92,7 @@ class _Header extends State<Header> {
           Container(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
+            
             child: Stack(
               children: [
                 // Lista dei film come sfondo
@@ -101,7 +102,6 @@ class _Header extends State<Header> {
                     child: ListView.builder(
                       physics: NeverScrollableScrollPhysics(),
                       scrollDirection: Axis.horizontal,
-                      controller: _scrollController,
                       itemCount: movies.length,
                       itemBuilder: (context, index) {
                         final movie = movies[index];
@@ -119,39 +119,41 @@ class _Header extends State<Header> {
                   ),
                 ),
 
-                // Contenuto in primo piano
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Image.asset(
-                      'lib/assets/logo.png',
-                      width: isScreenWide ? 150 : 100,
-                    ),
-                    const SizedBox(height: 30),
-                    SizedBox(
-                      width: 1200,
-                      child: Text(
-                        AppLocalizations.of(context)!.helloWorld,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: isScreenWide ? 80 : 30,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset(
+                        'lib/assets/logo.png',
+                        width: isScreenWide ? 150 : 100,
+                      ),
+                      const SizedBox(height: 30),
+                      SizedBox(
+                        width: 1200,
+                        child: Text(
+                          AppLocalizations.of(context)!.helloWorld,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            fontSize: isScreenWide ? 80 : 30,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
                       ),
-                    ),
-                    const SizedBox(height: 15),
-                    SizedBox(
-                      width: 1200,
-                      child: Text(
-                       AppLocalizations.of(context)!.description,
-                        style: TextStyle(fontSize: isScreenWide ? 30 : 20),
-                        textAlign: TextAlign.center,
+                      const SizedBox(height: 15),
+                      SizedBox(
+                        width: 1200,
+                        child: Text(
+                        AppLocalizations.of(context)!.description,
+                          style: TextStyle(fontSize: isScreenWide ? 30 : 20),
+                          textAlign: TextAlign.center,
+                        ),
                       ),
-                    ),
-                    const SizedBox(height: 50),
-                  ],
-                ),
+                      const SizedBox(height: 50),
+                    ],
+                  ),
+                )// Contenuto in primo piano
+                
               ],
             ),
           )
