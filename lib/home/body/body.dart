@@ -357,7 +357,9 @@ class _Body extends State<Body> {
                           onPressed: (){
                             launchURL('https://www.facebook.com/profile.php?id=61563026918463');
                           },
-                          icon: const Icon(Icons.facebook),
+                          icon: const Icon(
+                            Icons.facebook,
+                            color: Colors.white,),
                       ),
                       IconButton(
                         onPressed: (){
@@ -365,6 +367,7 @@ class _Body extends State<Body> {
                         },
                           icon: const Icon(
                               FontAwesomeIcons.instagram,
+                              color: Colors.white,
                           )
                       ),
                       IconButton(
@@ -373,6 +376,16 @@ class _Body extends State<Body> {
                         },
                         icon: const Icon(
                             FontAwesomeIcons.linkedin,
+                            color: Colors.white,
+                        )
+                      ),
+                      IconButton(
+                        onPressed: (){
+                          launchURL('https://www.tiktok.com/@cinemit.app');
+                        },
+                        icon: const Icon(
+                            FontAwesomeIcons.tiktok,
+                            color: Colors.white,
                         )
                       ),
                     ],
