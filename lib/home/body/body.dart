@@ -229,6 +229,7 @@ class _Body extends State<Body> {
 
               Text(
                 AppLocalizations.of(context)!.teamDevelopment,
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 40,
                     fontWeight: FontWeight.bold
