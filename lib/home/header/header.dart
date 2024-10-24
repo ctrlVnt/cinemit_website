@@ -24,9 +24,6 @@ class _Header extends State<Header> {
   void initState() {
     super.initState();
     fetchData();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _autoScroll();
-    });
   }
 
   Future<void> fetchData() async {
