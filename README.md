@@ -1,6 +1,7 @@
 # CineMit website
 
-[Here the website](https://www.cinemit.app)
+[![image](https://github.com/user-attachments/assets/554de6a2-aa3a-40e2-88c5-fd8b186d7b13)
+](https://www.cinemit.app)
 
 ## Welcome!
 
