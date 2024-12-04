@@ -217,12 +217,32 @@ class _Body extends State<Body> {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
-            Text(
-              'Coming soon on Apple App Store!',
-              style: TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
+            const SizedBox(height: 80),
+
+            SizedBox(
+              width: 400,
+              child: Text(
+              AppLocalizations.of(context)!.ios,
+              style: TextStyle(
+                fontSize: 16,
+                ),
+              ),
             ),
+
             const SizedBox(height: 30),
+
+            ElevatedButton.icon(
+              onPressed: (){
+                launchURL('https://gitlab.com/ctrlVnt/cinemit');
+              }, 
+              icon: Icon(Icons.apple),
+              label: Text('Download for IOS'),
+              style: ButtonStyle(
+                backgroundColor: WidgetStatePropertyAll(Colors.white),
+                foregroundColor: WidgetStatePropertyAll(Colors.black),
+                padding: WidgetStatePropertyAll(EdgeInsets.all(20)),
+              ),
+            ),
             
 
             SizedBox(height: spaceDemoH,),
